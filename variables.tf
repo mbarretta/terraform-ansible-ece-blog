@@ -81,8 +81,9 @@ variable "aws_instance_type" {
   default = "i3.xlarge"
 }
 
-# An additional volume that will be used by ECE, and its OS represented name. For i3 instances, this is nvme0n1.
-# If you use a different instance type, this value will change, as well as the resource definition in servers.tf
+# The device name of the non-root volume that will be used by ECE
+# For i3 instances, this is nvme0n1.
+# If you use a different instance type, this value will change and might also require changes to the resource definition in servers.tf
 variable "device_name" {
   default="nvme0n1"
 }
